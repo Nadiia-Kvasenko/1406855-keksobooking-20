@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
 * Студент: [Nadiia Kvasenko](https://up.htmlacademy.ru/javascript/20/user/1406855).
-* Наставник: `Неизвестно`.
+* Наставник: `Виталий Комолаев`.
 
 ---
 
