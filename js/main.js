@@ -48,7 +48,11 @@ var PICTURES = [
 ];
 
 var randomNumber = function (min, max) {
-  return min + Math.random() * (max - min);
+
+  var rand = min + Math.random() * (max + 1 - min);
+
+  return Math.floor(rand);
+
 };
 
 var createPoint = function (index) {
@@ -64,14 +68,14 @@ var createPoint = function (index) {
       title: TITLE[index],
       address: location.x + ', ' + location.y,
       price: randomNumber(0, 1000000),
-      type: APPARTMENT_TYPE[randomNumber(0, APPARTMENT_TYPE.length)],
-      rooms: ROOMS[randomNumber(0, GUESTS.length)],
-      guests: GUESTS[randomNumber(0, ROOMS.length)],
-      checkin: APPARTMENT_TIME[randomNumber(0, APPARTMENT_TIME.length)],
-      checkout: APPARTMENT_TIME[randomNumber(0, APPARTMENT_TIME.length)],
-      features: APPARTMENT_FEATURES.slice(0, randomNumber(0, APPARTMENT_FEATURES.length)),
+      type: APPARTMENT_TYPE[randomNumber(0, APPARTMENT_TYPE.length - 1)],
+      rooms: ROOMS[randomNumber(0, GUESTS.length - 1)],
+      guests: GUESTS[randomNumber(0, ROOMS.length - 1)],
+      checkin: APPARTMENT_TIME[randomNumber(0, APPARTMENT_TIME.length - 1)],
+      checkout: APPARTMENT_TIME[randomNumber(0, APPARTMENT_TIME.length - 1)],
+      features: APPARTMENT_FEATURES.slice(0, randomNumber(0, APPARTMENT_FEATURES.length - 1)),
       description: '',
-      pictures: PICTURES.slice(0, randomNumber(0, PICTURES.length))
+      pictures: PICTURES.slice(0, randomNumber(0, PICTURES.length - 1))
     },
     location: location
   };
